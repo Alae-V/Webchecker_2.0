@@ -26,7 +26,7 @@ public class Website {
     private String cssSelector;
 
     @Column(name= "interval_minutes")
-    private int intervalMinuts = 30;
+    private int intervalMinutes = 30;
 
     @Column(name = "last_checked")
     private LocalDateTime lastChecked;
