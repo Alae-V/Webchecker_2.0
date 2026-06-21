@@ -110,6 +110,6 @@ public class PlaywrightScraperService {
         }
         return website.getLastChecked().plusMinutes(website.getIntervalMinutes()).isBefore(now);
 
-    }
+    }4
 
 }
