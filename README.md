@@ -80,12 +80,6 @@ mvn test
 
 ---
 
-## License
-
-MIT
-
----
-
 ## Author
 
-Alae Ben Salah – [GitHub](https://github.com/Alae-V)
+Ala Ben Salah 
