@@ -12,6 +12,7 @@ import java.util.List;
 @Setter
 @Builder
 @RequiredArgsConstructor
+@AllArgsConstructor
 public class Website {
 
     @Id

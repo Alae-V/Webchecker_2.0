@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+
 import java.util.List;
 import java.util.ArrayList;
 import java.time.LocalDateTime;
@@ -18,7 +19,7 @@ public class PlaywrightScraperService {
 
     private final ContentItemRepository contentItemRepository;
     private final WebsiteRepository websiteRepository;
-    private final Mailservice mailservice;
+    private final MailService mailservice;
 
 
     /**
@@ -52,7 +53,7 @@ public class PlaywrightScraperService {
             Page page = browser.newPage();
 
             page.navigate(website.getUrl());
-            page.waitForLoadState(Page.LoadState.NETWORKIDLE);
+            page.waitForLoadState();
             page.waitForTimeout(3000);
 
             // Extrahiere relevante Elemente
@@ -110,6 +111,6 @@ public class PlaywrightScraperService {
         }
         return website.getLastChecked().plusMinutes(website.getIntervalMinutes()).isBefore(now);
 
-    }4
+    }
 
 }

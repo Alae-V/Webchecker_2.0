@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebChecker</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>WebChecker Dashboard</h1>
+    <p>Überwache deine Websites automatisch</p>
+
+    <div class="card">
+        <h2>Meine Websites</h2>
+        <ul id="websiteList">
+
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Neue Websites hinzufügen</h2>
+        <form id="addWebsiteForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="url" placeholder="URL" required>
+            <button type="submit">Hinzufügen</button>
+        </form>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
