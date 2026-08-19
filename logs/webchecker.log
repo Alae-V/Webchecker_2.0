@@ -1,442 +1,720 @@
-2026-08-11 15:47:55 - INFO - HV000001: Hibernate Validator 9.0.1.Final
-2026-08-11 15:47:55 - INFO - Starting WebChecker2Application using Java 25 with PID 20772 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
-2026-08-11 15:47:55 - INFO - No active profile set, falling back to 1 default profile: "default"
-2026-08-11 15:47:55 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-08-11 15:47:55 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-08-11 15:47:56 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-11 15:47:56 - INFO - Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
-2026-08-11 15:47:56 - INFO - Tomcat initialized with port 8080 (http)
-2026-08-11 15:47:56 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:47:56 - INFO - Starting service [Tomcat]
-2026-08-11 15:47:56 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-08-11 15:47:56 - INFO - Root WebApplicationContext: initialization completed in 1445 ms
-2026-08-11 15:47:57 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-11 15:47:57 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
-2026-08-11 15:47:57 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-11 15:47:57 - INFO - HikariPool-1 - Starting...
-2026-08-11 15:47:59 - WARN - HHH000247: ErrorCode: 1045, SQLState: 28000
-2026-08-11 15:47:59 - WARN - Access denied for user 'root'@'localhost' (using password: YES)
-2026-08-11 15:47:59 - WARN - HHH100046: Could not obtain connection to query JDBC database metadata
-org.hibernate.exception.AuthException: Unable to obtain isolated JDBC connection [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
-	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:87)
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212)
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.webchecker_2.WebChecker2Application.main(WebChecker2Application.java:10)
+2026-08-19 01:07:33 - INFO - HV000001: Hibernate Validator 9.0.1.Final
+2026-08-19 01:07:33 - INFO - Starting WebChecker2Application using Java 25 with PID 28900 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
+2026-08-19 01:07:33 - INFO - No active profile set, falling back to 1 default profile: "default"
+2026-08-19 01:07:33 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-19 01:07:33 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-19 01:07:33 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-19 01:07:33 - INFO - Finished Spring Data repository scanning in 56 ms. Found 2 JPA repository interfaces.
+2026-08-19 01:07:34 - INFO - Tomcat initialized with port 8080 (http)
+2026-08-19 01:07:34 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:07:34 - INFO - Starting service [Tomcat]
+2026-08-19 01:07:34 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-19 01:07:34 - INFO - Root WebApplicationContext: initialization completed in 1441 ms
+2026-08-19 01:07:34 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-19 01:07:34 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-08-19 01:07:35 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-19 01:07:35 - INFO - HikariPool-1 - Starting...
+2026-08-19 01:07:36 - INFO - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57255139
+2026-08-19 01:07:36 - INFO - HikariPool-1 - Start completed.
+2026-08-19 01:07:36 - INFO - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: webchecker_2db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-19 01:07:37 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-19 01:07:37 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:07:37 - INFO - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-19 01:07:37 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-19 01:07:37 - INFO - Adding welcome page: class path resource [static/index.html]
+2026-08-19 01:07:38 - INFO - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:07:38 - INFO - Tomcat started on port 8080 (http) with context path '/'
+2026-08-19 01:07:38 - INFO - Started WebChecker2Application in 5.655 seconds (process running for 6.672)
+2026-08-19 01:07:48 - INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-19 01:07:48 - INFO - Initializing Servlet 'dispatcherServlet'
+2026-08-19 01:07:48 - INFO - Completed initialization in 2 ms
+2026-08-19 01:12:50 - INFO - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-08-19 01:12:50 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-19 01:12:50 - INFO - Pausing ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:12:50 - INFO - Graceful shutdown complete
+2026-08-19 01:12:50 - INFO - Stopping ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:12:50 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:12:50 - INFO - HikariPool-1 - Shutdown initiated...
+2026-08-19 01:12:50 - INFO - HikariPool-1 - Shutdown completed.
+2026-08-19 01:12:50 - INFO - Starting WebChecker2Application using Java 25 with PID 28900 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
+2026-08-19 01:12:50 - INFO - No active profile set, falling back to 1 default profile: "default"
+2026-08-19 01:12:50 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-19 01:12:50 - INFO - Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2026-08-19 01:12:50 - INFO - Tomcat initialized with port 8080 (http)
+2026-08-19 01:12:50 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:12:50 - INFO - Starting service [Tomcat]
+2026-08-19 01:12:50 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-19 01:12:50 - INFO - Root WebApplicationContext: initialization completed in 388 ms
+2026-08-19 01:12:50 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-19 01:12:50 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-19 01:12:50 - INFO - HikariPool-2 - Starting...
+2026-08-19 01:12:50 - INFO - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@142b051e
+2026-08-19 01:12:50 - INFO - HikariPool-2 - Start completed.
+2026-08-19 01:12:50 - INFO - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: webchecker_2db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-19 01:12:50 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-19 01:12:50 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:12:50 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-19 01:12:50 - INFO - Adding welcome page: class path resource [static/index.html]
+2026-08-19 01:12:51 - INFO - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:12:51 - INFO - Tomcat started on port 8080 (http) with context path '/'
+2026-08-19 01:12:51 - INFO - Started WebChecker2Application in 0.872 seconds (process running for 319.642)
+2026-08-19 01:12:51 - INFO - Condition evaluation unchanged
+2026-08-19 01:12:55 - INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-19 01:12:55 - INFO - Initializing Servlet 'dispatcherServlet'
+2026-08-19 01:12:55 - INFO - Completed initialization in 1 ms
+2026-08-19 01:13:25 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-19 01:13:25 - INFO - Graceful shutdown complete
+2026-08-19 01:13:25 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:13:25 - INFO - HikariPool-2 - Shutdown initiated...
+2026-08-19 01:13:25 - INFO - HikariPool-2 - Shutdown completed.
+2026-08-19 01:13:27 - INFO - HV000001: Hibernate Validator 9.0.1.Final
+2026-08-19 01:13:28 - INFO - Starting WebChecker2Application using Java 25 with PID 12316 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
+2026-08-19 01:13:28 - INFO - No active profile set, falling back to 1 default profile: "default"
+2026-08-19 01:13:28 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-19 01:13:28 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-19 01:13:28 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-19 01:13:28 - INFO - Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2026-08-19 01:13:29 - INFO - Tomcat initialized with port 8080 (http)
+2026-08-19 01:13:29 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:13:29 - INFO - Starting service [Tomcat]
+2026-08-19 01:13:29 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-19 01:13:29 - INFO - Root WebApplicationContext: initialization completed in 1161 ms
+2026-08-19 01:13:29 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-19 01:13:29 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-08-19 01:13:29 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-19 01:13:29 - INFO - HikariPool-1 - Starting...
+2026-08-19 01:13:30 - INFO - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17deebe0
+2026-08-19 01:13:30 - INFO - HikariPool-1 - Start completed.
+2026-08-19 01:13:30 - INFO - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: webchecker_2db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-19 01:13:31 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-19 01:13:31 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:13:31 - INFO - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-19 01:13:31 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-19 01:13:31 - INFO - Adding welcome page: class path resource [static/index.html]
+2026-08-19 01:13:31 - INFO - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:13:31 - INFO - Tomcat started on port 8080 (http) with context path '/'
+2026-08-19 01:13:31 - INFO - Started WebChecker2Application in 4.419 seconds (process running for 5.282)
+2026-08-19 01:13:36 - INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-19 01:13:36 - INFO - Initializing Servlet 'dispatcherServlet'
+2026-08-19 01:13:36 - INFO - Completed initialization in 1 ms
+2026-08-19 01:13:56 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-19 01:13:56 - INFO - Graceful shutdown complete
+2026-08-19 01:13:56 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:13:56 - INFO - HikariPool-1 - Shutdown initiated...
+2026-08-19 01:13:56 - INFO - HikariPool-1 - Shutdown completed.
+2026-08-19 01:13:59 - INFO - HV000001: Hibernate Validator 9.0.1.Final
+2026-08-19 01:13:59 - INFO - Starting WebChecker2Application using Java 25 with PID 9416 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
+2026-08-19 01:13:59 - INFO - No active profile set, falling back to 1 default profile: "default"
+2026-08-19 01:13:59 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-19 01:13:59 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-19 01:14:00 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-19 01:14:00 - INFO - Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
+2026-08-19 01:14:00 - INFO - Tomcat initialized with port 8080 (http)
+2026-08-19 01:14:00 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:14:00 - INFO - Starting service [Tomcat]
+2026-08-19 01:14:00 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-19 01:14:00 - INFO - Root WebApplicationContext: initialization completed in 1171 ms
+2026-08-19 01:14:00 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-19 01:14:00 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-08-19 01:14:01 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-19 01:14:01 - INFO - HikariPool-1 - Starting...
+2026-08-19 01:14:01 - INFO - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5996f1ee
+2026-08-19 01:14:01 - INFO - HikariPool-1 - Start completed.
+2026-08-19 01:14:01 - INFO - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: webchecker_2db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-19 01:14:02 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-19 01:14:02 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:14:02 - INFO - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-19 01:14:02 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-19 01:14:02 - INFO - Adding welcome page: class path resource [static/index.html]
+2026-08-19 01:14:03 - INFO - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:14:03 - INFO - Tomcat started on port 8080 (http) with context path '/'
+2026-08-19 01:14:03 - INFO - Started WebChecker2Application in 4.341 seconds (process running for 5.16)
+2026-08-19 01:14:08 - INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-19 01:14:08 - INFO - Initializing Servlet 'dispatcherServlet'
+2026-08-19 01:14:08 - INFO - Completed initialization in 1 ms
+2026-08-19 01:32:02 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-19 01:32:02 - INFO - Graceful shutdown complete
+2026-08-19 01:32:02 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:32:02 - INFO - HikariPool-1 - Shutdown initiated...
+2026-08-19 01:32:02 - INFO - HikariPool-1 - Shutdown completed.
+2026-08-19 01:32:04 - INFO - HV000001: Hibernate Validator 9.0.1.Final
+2026-08-19 01:32:04 - INFO - Starting WebChecker2Application using Java 25 with PID 16580 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
+2026-08-19 01:32:04 - INFO - No active profile set, falling back to 1 default profile: "default"
+2026-08-19 01:32:04 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-19 01:32:04 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-19 01:32:05 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-19 01:32:05 - INFO - Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2026-08-19 01:32:05 - INFO - Tomcat initialized with port 8080 (http)
+2026-08-19 01:32:05 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:32:05 - INFO - Starting service [Tomcat]
+2026-08-19 01:32:05 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-19 01:32:06 - INFO - Root WebApplicationContext: initialization completed in 1169 ms
+2026-08-19 01:32:06 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-19 01:32:06 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-08-19 01:32:06 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-19 01:32:06 - INFO - HikariPool-1 - Starting...
+2026-08-19 01:32:07 - INFO - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17deebe0
+2026-08-19 01:32:07 - INFO - HikariPool-1 - Start completed.
+2026-08-19 01:32:07 - INFO - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: webchecker_2db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-19 01:32:07 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-19 01:32:08 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:32:08 - INFO - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-19 01:32:08 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-19 01:32:08 - INFO - Adding welcome page: class path resource [static/index.html]
+2026-08-19 01:32:08 - INFO - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:32:08 - INFO - Tomcat started on port 8080 (http) with context path '/'
+2026-08-19 01:32:08 - INFO - Started WebChecker2Application in 4.418 seconds (process running for 5.257)
+2026-08-19 01:32:13 - INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-19 01:32:13 - INFO - Initializing Servlet 'dispatcherServlet'
+2026-08-19 01:32:13 - INFO - Completed initialization in 1 ms
+2026-08-19 01:35:51 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-19 01:35:51 - INFO - Graceful shutdown complete
+2026-08-19 01:35:51 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:35:51 - INFO - HikariPool-1 - Shutdown initiated...
+2026-08-19 01:35:51 - INFO - HikariPool-1 - Shutdown completed.
+2026-08-19 01:36:26 - INFO - HV000001: Hibernate Validator 9.0.1.Final
+2026-08-19 01:36:27 - INFO - Starting WebChecker2Application using Java 25 with PID 13612 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
+2026-08-19 01:36:27 - INFO - No active profile set, falling back to 1 default profile: "default"
+2026-08-19 01:36:27 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-19 01:36:27 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-19 01:36:27 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-19 01:36:27 - INFO - Finished Spring Data repository scanning in 46 ms. Found 2 JPA repository interfaces.
+2026-08-19 01:36:28 - INFO - Tomcat initialized with port 8080 (http)
+2026-08-19 01:36:28 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:36:28 - INFO - Starting service [Tomcat]
+2026-08-19 01:36:28 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-19 01:36:28 - INFO - Root WebApplicationContext: initialization completed in 1206 ms
+2026-08-19 01:36:28 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-19 01:36:28 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-08-19 01:36:28 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-19 01:36:28 - INFO - HikariPool-1 - Starting...
+2026-08-19 01:36:29 - INFO - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17deebe0
+2026-08-19 01:36:29 - INFO - HikariPool-1 - Start completed.
+2026-08-19 01:36:29 - INFO - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: webchecker_2db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-19 01:36:30 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-19 01:36:30 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:36:30 - INFO - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-19 01:36:30 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-19 01:36:30 - INFO - Adding welcome page: class path resource [static/index.html]
+2026-08-19 01:36:30 - INFO - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:36:30 - INFO - Tomcat started on port 8080 (http) with context path '/'
+2026-08-19 01:36:30 - INFO - Started WebChecker2Application in 4.472 seconds (process running for 5.237)
+2026-08-19 01:36:35 - INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-19 01:36:35 - INFO - Initializing Servlet 'dispatcherServlet'
+2026-08-19 01:36:35 - INFO - Completed initialization in 1 ms
+2026-08-19 01:37:21 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-19 01:37:21 - INFO - Graceful shutdown complete
+2026-08-19 01:37:21 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:37:21 - INFO - HikariPool-1 - Shutdown initiated...
+2026-08-19 01:37:21 - INFO - HikariPool-1 - Shutdown completed.
+2026-08-19 01:37:51 - INFO - HV000001: Hibernate Validator 9.0.1.Final
+2026-08-19 01:37:51 - INFO - Starting WebChecker2Application using Java 25 with PID 24908 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
+2026-08-19 01:37:51 - INFO - No active profile set, falling back to 1 default profile: "default"
+2026-08-19 01:37:51 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-19 01:37:51 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-19 01:37:52 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-19 01:37:52 - INFO - Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2026-08-19 01:37:52 - INFO - Tomcat initialized with port 8080 (http)
+2026-08-19 01:37:52 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:37:52 - INFO - Starting service [Tomcat]
+2026-08-19 01:37:52 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-19 01:37:52 - INFO - Root WebApplicationContext: initialization completed in 1176 ms
+2026-08-19 01:37:52 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-19 01:37:52 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-08-19 01:37:53 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-19 01:37:53 - INFO - HikariPool-1 - Starting...
+2026-08-19 01:37:53 - INFO - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f3e697f
+2026-08-19 01:37:53 - INFO - HikariPool-1 - Start completed.
+2026-08-19 01:37:53 - INFO - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: webchecker_2db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-19 01:37:54 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-19 01:37:54 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:37:54 - INFO - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-19 01:37:55 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-19 01:37:55 - INFO - Adding welcome page: class path resource [static/index.html]
+2026-08-19 01:37:55 - INFO - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:37:55 - INFO - Tomcat started on port 8080 (http) with context path '/'
+2026-08-19 01:37:55 - INFO - Started WebChecker2Application in 4.425 seconds (process running for 5.178)
+2026-08-19 01:37:59 - INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-19 01:37:59 - INFO - Initializing Servlet 'dispatcherServlet'
+2026-08-19 01:37:59 - INFO - Completed initialization in 1 ms
+2026-08-19 01:41:46 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-19 01:41:46 - INFO - Graceful shutdown complete
+2026-08-19 01:41:46 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:41:46 - INFO - HikariPool-1 - Shutdown initiated...
+2026-08-19 01:41:46 - INFO - HikariPool-1 - Shutdown completed.
+2026-08-19 01:41:49 - INFO - HV000001: Hibernate Validator 9.0.1.Final
+2026-08-19 01:41:49 - INFO - Starting WebChecker2Application using Java 25 with PID 8616 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
+2026-08-19 01:41:49 - INFO - No active profile set, falling back to 1 default profile: "default"
+2026-08-19 01:41:49 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-19 01:41:49 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-19 01:41:50 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-19 01:41:50 - INFO - Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
+2026-08-19 01:41:50 - INFO - Tomcat initialized with port 8080 (http)
+2026-08-19 01:41:50 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:41:50 - INFO - Starting service [Tomcat]
+2026-08-19 01:41:50 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-19 01:41:50 - INFO - Root WebApplicationContext: initialization completed in 1478 ms
+2026-08-19 01:41:50 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-19 01:41:50 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-08-19 01:41:51 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-19 01:41:51 - INFO - HikariPool-1 - Starting...
+2026-08-19 01:41:51 - INFO - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2dfd1aa2
+2026-08-19 01:41:51 - INFO - HikariPool-1 - Start completed.
+2026-08-19 01:41:51 - INFO - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: webchecker_2db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-19 01:41:52 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-19 01:41:52 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:41:52 - INFO - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-19 01:41:53 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-19 01:41:53 - INFO - Adding welcome page: class path resource [static/index.html]
+2026-08-19 01:41:53 - INFO - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:41:53 - INFO - Tomcat started on port 8080 (http) with context path '/'
+2026-08-19 01:41:53 - INFO - Started WebChecker2Application in 4.944 seconds (process running for 5.725)
+2026-08-19 01:41:55 - INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-19 01:41:55 - INFO - Initializing Servlet 'dispatcherServlet'
+2026-08-19 01:41:55 - INFO - Completed initialization in 1 ms
+2026-08-19 01:43:57 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-19 01:43:57 - INFO - Graceful shutdown complete
+2026-08-19 01:43:57 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:43:57 - INFO - HikariPool-1 - Shutdown initiated...
+2026-08-19 01:43:58 - INFO - HikariPool-1 - Shutdown completed.
+2026-08-19 01:44:00 - INFO - HV000001: Hibernate Validator 9.0.1.Final
+2026-08-19 01:44:00 - INFO - Starting WebChecker2Application using Java 25 with PID 18616 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
+2026-08-19 01:44:00 - INFO - No active profile set, falling back to 1 default profile: "default"
+2026-08-19 01:44:00 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-19 01:44:00 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-19 01:44:01 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-19 01:44:01 - INFO - Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2026-08-19 01:44:02 - INFO - Tomcat initialized with port 8080 (http)
+2026-08-19 01:44:02 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:44:02 - INFO - Starting service [Tomcat]
+2026-08-19 01:44:02 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-19 01:44:02 - INFO - Root WebApplicationContext: initialization completed in 1517 ms
+2026-08-19 01:44:02 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-19 01:44:02 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-08-19 01:44:02 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-19 01:44:02 - INFO - HikariPool-1 - Starting...
+2026-08-19 01:44:03 - INFO - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2dfd1aa2
+2026-08-19 01:44:03 - INFO - HikariPool-1 - Start completed.
+2026-08-19 01:44:03 - INFO - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: webchecker_2db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-19 01:44:04 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-19 01:44:04 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:44:04 - INFO - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-19 01:44:04 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-19 01:44:04 - INFO - Adding welcome page: class path resource [static/index.html]
+2026-08-19 01:44:05 - INFO - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:44:05 - INFO - Tomcat started on port 8080 (http) with context path '/'
+2026-08-19 01:44:05 - INFO - Started WebChecker2Application in 5.167 seconds (process running for 6.078)
+2026-08-19 01:44:09 - INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-19 01:44:09 - INFO - Initializing Servlet 'dispatcherServlet'
+2026-08-19 01:44:09 - INFO - Completed initialization in 1 ms
+2026-08-19 01:44:35 - INFO - Neue Website hinzugefügt GetInIT (ID: 1)
+2026-08-19 01:44:36 - ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null
+	at com.example.webchecker_2.service.WebCheckService.mapToResponse(WebCheckService.java:62)
+	at com.example.webchecker_2.service.WebCheckService.addWebsite(WebCheckService.java:35)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
-Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
-	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508)
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48)
-	... 40 common frames omitted
-2026-08-11 15:47:59 - ERROR - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-2026-08-11 15:47:59 - WARN - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-2026-08-11 15:47:59 - INFO - Stopping service [Tomcat]
-2026-08-11 15:47:59 - INFO - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-08-11 15:47:59 - ERROR - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.webchecker_2.WebChecker2Application.main(WebChecker2Application.java:10)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.example.webchecker_2.service.WebCheckService$$SpringCGLIB$$0.addWebsite(<generated>)
+	at com.example.webchecker_2.controller.WebCheckerController.addwebsite(WebCheckerController.java:22)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
-Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:273)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212)
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
-	... 18 common frames omitted
-Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:190)
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:86)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:200)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:452)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260)
-	... 34 common frames omitted
-2026-08-11 15:50:58 - INFO - HV000001: Hibernate Validator 9.0.1.Final
-2026-08-11 15:50:58 - INFO - Starting WebChecker2Application using Java 25 with PID 26068 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
-2026-08-11 15:50:58 - INFO - No active profile set, falling back to 1 default profile: "default"
-2026-08-11 15:50:58 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-08-11 15:50:58 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-08-11 15:50:58 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-11 15:50:58 - INFO - Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
-2026-08-11 15:50:59 - INFO - Tomcat initialized with port 8080 (http)
-2026-08-11 15:50:59 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:50:59 - INFO - Starting service [Tomcat]
-2026-08-11 15:50:59 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-08-11 15:50:59 - INFO - Root WebApplicationContext: initialization completed in 1182 ms
-2026-08-11 15:50:59 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-11 15:50:59 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
-2026-08-11 15:51:00 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-11 15:51:00 - INFO - HikariPool-1 - Starting...
-2026-08-11 15:51:01 - WARN - HHH000247: ErrorCode: 1049, SQLState: 42000
-2026-08-11 15:51:01 - WARN - Unknown database 'webcheckerdb'
-2026-08-11 15:51:01 - WARN - HHH100046: Could not obtain connection to query JDBC database metadata
-org.hibernate.exception.SQLGrammarException: Unable to obtain isolated JDBC connection [Unknown database 'webcheckerdb'] [n/a]
-	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:63)
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212)
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.webchecker_2.WebChecker2Application.main(WebChecker2Application.java:10)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-08-19 01:44:46 - INFO - Neue Website hinzugefügt GetInIT (ID: 2)
+2026-08-19 01:44:46 - ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null
+	at com.example.webchecker_2.service.WebCheckService.mapToResponse(WebCheckService.java:62)
+	at com.example.webchecker_2.service.WebCheckService.addWebsite(WebCheckService.java:35)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
-Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'webcheckerdb'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
-	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508)
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48)
-	... 40 common frames omitted
-2026-08-11 15:51:01 - ERROR - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-2026-08-11 15:51:01 - WARN - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-2026-08-11 15:51:01 - INFO - Stopping service [Tomcat]
-2026-08-11 15:51:01 - INFO - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-08-11 15:51:01 - ERROR - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.webchecker_2.WebChecker2Application.main(WebChecker2Application.java:10)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.example.webchecker_2.service.WebCheckService$$SpringCGLIB$$0.addWebsite(<generated>)
+	at com.example.webchecker_2.controller.WebCheckerController.addwebsite(WebCheckerController.java:22)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
-Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:273)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212)
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
-	... 18 common frames omitted
-Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:190)
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:86)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:200)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:452)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260)
-	... 34 common frames omitted
-2026-08-11 15:51:20 - INFO - HV000001: Hibernate Validator 9.0.1.Final
-2026-08-11 15:51:20 - INFO - Starting WebChecker2Application using Java 25 with PID 26896 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
-2026-08-11 15:51:20 - INFO - No active profile set, falling back to 1 default profile: "default"
-2026-08-11 15:51:20 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-08-11 15:51:20 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-08-11 15:51:21 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-11 15:51:21 - INFO - Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
-2026-08-11 15:51:21 - INFO - Tomcat initialized with port 8080 (http)
-2026-08-11 15:51:21 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:51:21 - INFO - Starting service [Tomcat]
-2026-08-11 15:51:21 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-08-11 15:51:21 - INFO - Root WebApplicationContext: initialization completed in 1274 ms
-2026-08-11 15:51:21 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-11 15:51:21 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
-2026-08-11 15:51:22 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-11 15:51:22 - INFO - HikariPool-1 - Starting...
-2026-08-11 15:51:23 - WARN - HHH000247: ErrorCode: 1049, SQLState: 42000
-2026-08-11 15:51:23 - WARN - Unknown database 'webcheckerdb'
-2026-08-11 15:51:23 - WARN - HHH100046: Could not obtain connection to query JDBC database metadata
-org.hibernate.exception.SQLGrammarException: Unable to obtain isolated JDBC connection [Unknown database 'webcheckerdb'] [n/a]
-	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:63)
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212)
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.webchecker_2.WebChecker2Application.main(WebChecker2Application.java:10)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-08-19 01:47:21 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-19 01:47:21 - INFO - Graceful shutdown complete
+2026-08-19 01:47:21 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:47:21 - INFO - HikariPool-1 - Shutdown initiated...
+2026-08-19 01:47:21 - INFO - HikariPool-1 - Shutdown completed.
+2026-08-19 01:47:26 - INFO - HV000001: Hibernate Validator 9.0.1.Final
+2026-08-19 01:47:26 - INFO - Starting WebChecker2Application using Java 25 with PID 16172 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
+2026-08-19 01:47:26 - INFO - No active profile set, falling back to 1 default profile: "default"
+2026-08-19 01:47:26 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-19 01:47:26 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-19 01:47:27 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-19 01:47:27 - INFO - Finished Spring Data repository scanning in 51 ms. Found 2 JPA repository interfaces.
+2026-08-19 01:47:27 - INFO - Tomcat initialized with port 8080 (http)
+2026-08-19 01:47:27 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:47:27 - INFO - Starting service [Tomcat]
+2026-08-19 01:47:27 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-19 01:47:27 - INFO - Root WebApplicationContext: initialization completed in 1359 ms
+2026-08-19 01:47:27 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-19 01:47:28 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-08-19 01:47:28 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-19 01:47:28 - INFO - HikariPool-1 - Starting...
+2026-08-19 01:47:28 - INFO - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2dfd1aa2
+2026-08-19 01:47:28 - INFO - HikariPool-1 - Start completed.
+2026-08-19 01:47:29 - INFO - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: webchecker_2db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-19 01:47:29 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-19 01:47:30 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:47:30 - INFO - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-19 01:47:30 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-19 01:47:30 - INFO - Adding welcome page: class path resource [static/index.html]
+2026-08-19 01:47:30 - INFO - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:47:30 - INFO - Tomcat started on port 8080 (http) with context path '/'
+2026-08-19 01:47:30 - INFO - Started WebChecker2Application in 4.975 seconds (process running for 5.825)
+2026-08-19 01:47:39 - INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-19 01:47:39 - INFO - Initializing Servlet 'dispatcherServlet'
+2026-08-19 01:47:39 - INFO - Completed initialization in 1 ms
+2026-08-19 01:47:44 - INFO - Neue Website hinzugefügt GetInIT (ID: 3)
+2026-08-19 01:47:44 - ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null
+	at com.example.webchecker_2.service.WebCheckService.mapToResponse(WebCheckService.java:61)
+	at com.example.webchecker_2.service.WebCheckService.addWebsite(WebCheckService.java:34)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
-Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'webcheckerdb'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
-	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508)
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48)
-	... 40 common frames omitted
-2026-08-11 15:51:23 - ERROR - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-2026-08-11 15:51:23 - WARN - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-2026-08-11 15:51:23 - INFO - Stopping service [Tomcat]
-2026-08-11 15:51:23 - INFO - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-08-11 15:51:23 - ERROR - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.webchecker_2.WebChecker2Application.main(WebChecker2Application.java:10)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.example.webchecker_2.service.WebCheckService$$SpringCGLIB$$0.addWebsite(<generated>)
+	at com.example.webchecker_2.controller.WebCheckerController.addwebsite(WebCheckerController.java:22)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
-Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:273)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212)
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
-	... 18 common frames omitted
-Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:190)
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:86)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:200)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:452)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260)
-	... 34 common frames omitted
-2026-08-11 15:52:38 - INFO - HV000001: Hibernate Validator 9.0.1.Final
-2026-08-11 15:52:38 - INFO - Starting WebChecker2Application using Java 25 with PID 18356 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
-2026-08-11 15:52:38 - INFO - No active profile set, falling back to 1 default profile: "default"
-2026-08-11 15:52:38 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-08-11 15:52:38 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-08-11 15:52:39 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-11 15:52:39 - INFO - Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
-2026-08-11 15:52:40 - INFO - Tomcat initialized with port 8080 (http)
-2026-08-11 15:52:40 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:52:40 - INFO - Starting service [Tomcat]
-2026-08-11 15:52:40 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-08-11 15:52:40 - INFO - Root WebApplicationContext: initialization completed in 1173 ms
-2026-08-11 15:52:40 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-11 15:52:40 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
-2026-08-11 15:52:40 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-11 15:52:40 - INFO - HikariPool-1 - Starting...
-2026-08-11 15:52:41 - INFO - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71e04b7e
-2026-08-11 15:52:41 - INFO - HikariPool-1 - Start completed.
-2026-08-11 15:52:41 - INFO - HHH10001005: Database info:
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-08-19 01:48:02 - INFO - Neue Website hinzugefügt GetInIT (ID: 4)
+2026-08-19 01:48:02 - ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null
+	at com.example.webchecker_2.service.WebCheckService.mapToResponse(WebCheckService.java:61)
+	at com.example.webchecker_2.service.WebCheckService.addWebsite(WebCheckService.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.example.webchecker_2.service.WebCheckService$$SpringCGLIB$$0.addWebsite(<generated>)
+	at com.example.webchecker_2.controller.WebCheckerController.addwebsite(WebCheckerController.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-08-19 01:48:03 - INFO - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-08-19 01:48:03 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-19 01:48:03 - INFO - Pausing ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:48:03 - INFO - Graceful shutdown complete
+2026-08-19 01:48:03 - INFO - Stopping ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:48:03 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:48:03 - INFO - HikariPool-1 - Shutdown initiated...
+2026-08-19 01:48:03 - INFO - HikariPool-1 - Shutdown completed.
+2026-08-19 01:48:03 - INFO - Starting WebChecker2Application using Java 25 with PID 16172 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
+2026-08-19 01:48:03 - INFO - No active profile set, falling back to 1 default profile: "default"
+2026-08-19 01:48:04 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-19 01:48:04 - INFO - Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2026-08-19 01:48:04 - INFO - Tomcat initialized with port 8080 (http)
+2026-08-19 01:48:04 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:48:04 - INFO - Starting service [Tomcat]
+2026-08-19 01:48:04 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-19 01:48:04 - INFO - Root WebApplicationContext: initialization completed in 356 ms
+2026-08-19 01:48:04 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-19 01:48:04 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-19 01:48:04 - INFO - HikariPool-2 - Starting...
+2026-08-19 01:48:04 - INFO - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40df9369
+2026-08-19 01:48:04 - INFO - HikariPool-2 - Start completed.
+2026-08-19 01:48:04 - INFO - HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
@@ -448,36 +726,220 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-08-11 15:52:42 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-11 15:52:42 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 15:52:42 - INFO - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-08-11 15:52:42 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-11 15:52:43 - INFO - Starting ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:52:43 - INFO - Tomcat started on port 8080 (http) with context path '/'
-2026-08-11 15:52:43 - INFO - Started WebChecker2Application in 4.999 seconds (process running for 5.806)
-2026-08-11 15:52:50 - INFO - Restarting due to 20 class path changes (0 additions, 19 deletions, 1 modification)
-2026-08-11 15:52:50 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-11 15:52:50 - INFO - Pausing ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:52:50 - INFO - Graceful shutdown complete
-2026-08-11 15:52:50 - INFO - Stopping ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:52:50 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 15:52:50 - INFO - HikariPool-1 - Shutdown initiated...
-2026-08-11 15:52:50 - INFO - HikariPool-1 - Shutdown completed.
-2026-08-11 15:52:50 - INFO - Starting WebChecker2Application using Java 25 with PID 18356 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
-2026-08-11 15:52:50 - INFO - No active profile set, falling back to 1 default profile: "default"
-2026-08-11 15:52:51 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-11 15:52:51 - INFO - Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
-2026-08-11 15:52:51 - INFO - Tomcat initialized with port 8080 (http)
-2026-08-11 15:52:51 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:52:51 - INFO - Starting service [Tomcat]
-2026-08-11 15:52:51 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-08-11 15:52:51 - INFO - Root WebApplicationContext: initialization completed in 308 ms
-2026-08-11 15:52:51 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-11 15:52:51 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-11 15:52:51 - INFO - HikariPool-2 - Starting...
-2026-08-11 15:52:51 - INFO - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@765fed61
-2026-08-11 15:52:51 - INFO - HikariPool-2 - Start completed.
-2026-08-11 15:52:51 - INFO - HHH10001005: Database info:
+2026-08-19 01:48:04 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-19 01:48:04 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:48:04 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-19 01:48:04 - INFO - Adding welcome page: class path resource [static/index.html]
+2026-08-19 01:48:04 - INFO - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:48:04 - INFO - Tomcat started on port 8080 (http) with context path '/'
+2026-08-19 01:48:04 - INFO - Started WebChecker2Application in 0.763 seconds (process running for 39.418)
+2026-08-19 01:48:04 - INFO - Condition evaluation unchanged
+2026-08-19 01:48:10 - INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-19 01:48:10 - INFO - Initializing Servlet 'dispatcherServlet'
+2026-08-19 01:48:10 - INFO - Completed initialization in 1 ms
+2026-08-19 01:48:10 - INFO - Neue Website hinzugefügt GetInIT (ID: 5)
+2026-08-19 01:48:10 - ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null
+	at com.example.webchecker_2.service.WebCheckService.mapToResponse(WebCheckService.java:61)
+	at com.example.webchecker_2.service.WebCheckService.addWebsite(WebCheckService.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.example.webchecker_2.service.WebCheckService$$SpringCGLIB$$0.addWebsite(<generated>)
+	at com.example.webchecker_2.controller.WebCheckerController.addwebsite(WebCheckerController.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-08-19 01:48:22 - INFO - Neue Website hinzugefügt GetInIT (ID: 6)
+2026-08-19 01:48:22 - ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null
+	at com.example.webchecker_2.service.WebCheckService.mapToResponse(WebCheckService.java:61)
+	at com.example.webchecker_2.service.WebCheckService.addWebsite(WebCheckService.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.example.webchecker_2.service.WebCheckService$$SpringCGLIB$$0.addWebsite(<generated>)
+	at com.example.webchecker_2.controller.WebCheckerController.addwebsite(WebCheckerController.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-08-19 01:48:44 - INFO - Neue Website hinzugefügt GetInIT (ID: 7)
+2026-08-19 01:48:44 - ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null
+	at com.example.webchecker_2.service.WebCheckService.mapToResponse(WebCheckService.java:61)
+	at com.example.webchecker_2.service.WebCheckService.addWebsite(WebCheckService.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.example.webchecker_2.service.WebCheckService$$SpringCGLIB$$0.addWebsite(<generated>)
+	at com.example.webchecker_2.controller.WebCheckerController.addwebsite(WebCheckerController.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-08-19 01:48:44 - INFO - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-08-19 01:48:44 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-19 01:48:44 - INFO - Pausing ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:48:44 - INFO - Graceful shutdown complete
+2026-08-19 01:48:44 - INFO - Stopping ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:48:44 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:48:44 - INFO - HikariPool-2 - Shutdown initiated...
+2026-08-19 01:48:44 - INFO - HikariPool-2 - Shutdown completed.
+2026-08-19 01:48:44 - INFO - Starting WebChecker2Application using Java 25 with PID 16172 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
+2026-08-19 01:48:44 - INFO - No active profile set, falling back to 1 default profile: "default"
+2026-08-19 01:48:44 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-19 01:48:44 - INFO - Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
+2026-08-19 01:48:44 - INFO - Tomcat initialized with port 8080 (http)
+2026-08-19 01:48:44 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:48:44 - INFO - Starting service [Tomcat]
+2026-08-19 01:48:44 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-19 01:48:44 - INFO - Root WebApplicationContext: initialization completed in 320 ms
+2026-08-19 01:48:44 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-19 01:48:44 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-19 01:48:44 - INFO - HikariPool-3 - Starting...
+2026-08-19 01:48:44 - INFO - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b8bc0b9
+2026-08-19 01:48:44 - INFO - HikariPool-3 - Start completed.
+2026-08-19 01:48:44 - INFO - HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
@@ -489,348 +951,259 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-08-11 15:52:51 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-11 15:52:51 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 15:52:51 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-11 15:52:51 - INFO - Starting ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:52:51 - INFO - Tomcat started on port 8080 (http) with context path '/'
-2026-08-11 15:52:51 - INFO - Started WebChecker2Application in 0.591 seconds (process running for 13.926)
-2026-08-11 15:52:51 - INFO - Condition evaluation unchanged
-2026-08-11 15:52:53 - INFO - Restarting due to 19 class path changes (19 additions, 0 deletions, 0 modifications)
-2026-08-11 15:52:53 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-11 15:52:53 - INFO - Pausing ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:52:53 - INFO - Graceful shutdown complete
-2026-08-11 15:52:53 - INFO - Stopping ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:52:53 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 15:52:53 - INFO - HikariPool-2 - Shutdown initiated...
-2026-08-11 15:52:53 - INFO - HikariPool-2 - Shutdown completed.
-2026-08-11 15:52:54 - INFO - Starting WebChecker2Application using Java 25 with PID 18356 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
-2026-08-11 15:52:54 - INFO - No active profile set, falling back to 1 default profile: "default"
-2026-08-11 15:52:54 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-11 15:52:54 - INFO - Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
-2026-08-11 15:52:54 - INFO - Tomcat initialized with port 8080 (http)
-2026-08-11 15:52:54 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:52:54 - INFO - Starting service [Tomcat]
-2026-08-11 15:52:54 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-08-11 15:52:54 - INFO - Root WebApplicationContext: initialization completed in 568 ms
-2026-08-11 15:52:54 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-11 15:52:54 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-11 15:52:54 - INFO - HikariPool-3 - Starting...
-2026-08-11 15:52:54 - INFO - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@472b4c43
-2026-08-11 15:52:54 - INFO - HikariPool-3 - Start completed.
-2026-08-11 15:52:54 - INFO - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.45
-	Default catalog/schema: webchecker_2db/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-11 15:52:55 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-11 15:52:55 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 15:52:55 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-11 15:52:55 - INFO - Starting ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:52:55 - INFO - Tomcat started on port 8080 (http) with context path '/'
-2026-08-11 15:52:55 - INFO - Started WebChecker2Application in 1.424 seconds (process running for 17.869)
-2026-08-11 15:52:55 - INFO - Condition evaluation unchanged
-2026-08-11 15:53:45 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-11 15:53:45 - INFO - Graceful shutdown complete
-2026-08-11 15:53:45 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 15:53:45 - INFO - HikariPool-3 - Shutdown initiated...
-2026-08-11 15:53:45 - INFO - HikariPool-3 - Shutdown completed.
-2026-08-11 15:53:47 - INFO - HV000001: Hibernate Validator 9.0.1.Final
-2026-08-11 15:53:47 - INFO - Starting WebChecker2Application using Java 25 with PID 2524 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
-2026-08-11 15:53:47 - INFO - No active profile set, falling back to 1 default profile: "default"
-2026-08-11 15:53:47 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-08-11 15:53:47 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-08-11 15:53:48 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-11 15:53:48 - INFO - Finished Spring Data repository scanning in 56 ms. Found 2 JPA repository interfaces.
-2026-08-11 15:53:49 - INFO - Tomcat initialized with port 8080 (http)
-2026-08-11 15:53:49 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:53:49 - INFO - Starting service [Tomcat]
-2026-08-11 15:53:49 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-08-11 15:53:49 - INFO - Root WebApplicationContext: initialization completed in 1300 ms
-2026-08-11 15:53:49 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-11 15:53:49 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
-2026-08-11 15:53:49 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-11 15:53:49 - INFO - HikariPool-1 - Starting...
-2026-08-11 15:53:50 - INFO - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2dfd1aa2
-2026-08-11 15:53:50 - INFO - HikariPool-1 - Start completed.
-2026-08-11 15:53:50 - INFO - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.45
-	Default catalog/schema: webchecker_2db/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-11 15:53:51 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-11 15:53:51 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 15:53:51 - INFO - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-08-11 15:53:51 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-11 15:53:51 - INFO - Starting ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:53:51 - INFO - Tomcat started on port 8080 (http) with context path '/'
-2026-08-11 15:53:51 - INFO - Started WebChecker2Application in 4.627 seconds (process running for 5.59)
-2026-08-11 15:56:15 - INFO - Restarting due to 20 class path changes (0 additions, 19 deletions, 1 modification)
-2026-08-11 15:56:15 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-11 15:56:15 - INFO - Pausing ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:56:15 - INFO - Graceful shutdown complete
-2026-08-11 15:56:15 - INFO - Stopping ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:56:15 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 15:56:15 - INFO - HikariPool-1 - Shutdown initiated...
-2026-08-11 15:56:15 - INFO - HikariPool-1 - Shutdown completed.
-2026-08-11 15:56:15 - INFO - Starting WebChecker2Application using Java 25 with PID 2524 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
-2026-08-11 15:56:15 - INFO - No active profile set, falling back to 1 default profile: "default"
-2026-08-11 15:56:16 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-11 15:56:16 - INFO - Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
-2026-08-11 15:56:16 - INFO - Tomcat initialized with port 8080 (http)
-2026-08-11 15:56:16 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:56:16 - INFO - Starting service [Tomcat]
-2026-08-11 15:56:16 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-08-11 15:56:16 - INFO - Root WebApplicationContext: initialization completed in 297 ms
-2026-08-11 15:56:16 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-11 15:56:16 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-11 15:56:16 - INFO - HikariPool-2 - Starting...
-2026-08-11 15:56:16 - INFO - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c7cdca7
-2026-08-11 15:56:16 - INFO - HikariPool-2 - Start completed.
-2026-08-11 15:56:16 - INFO - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.45
-	Default catalog/schema: webchecker_2db/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-11 15:56:16 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-11 15:56:16 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 15:56:16 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-11 15:56:16 - INFO - Starting ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:56:16 - INFO - Tomcat started on port 8080 (http) with context path '/'
-2026-08-11 15:56:16 - INFO - Started WebChecker2Application in 0.612 seconds (process running for 150.063)
-2026-08-11 15:56:16 - INFO - Condition evaluation unchanged
-2026-08-11 15:56:18 - INFO - Restarting due to 19 class path changes (19 additions, 0 deletions, 0 modifications)
-2026-08-11 15:56:18 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-11 15:56:18 - INFO - Pausing ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:56:18 - INFO - Graceful shutdown complete
-2026-08-11 15:56:18 - INFO - Stopping ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:56:18 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 15:56:18 - INFO - HikariPool-2 - Shutdown initiated...
-2026-08-11 15:56:18 - INFO - HikariPool-2 - Shutdown completed.
-2026-08-11 15:56:18 - INFO - Starting WebChecker2Application using Java 25 with PID 2524 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
-2026-08-11 15:56:18 - INFO - No active profile set, falling back to 1 default profile: "default"
-2026-08-11 15:56:19 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-11 15:56:19 - INFO - Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
-2026-08-11 15:56:19 - INFO - Tomcat initialized with port 8080 (http)
-2026-08-11 15:56:19 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:56:19 - INFO - Starting service [Tomcat]
-2026-08-11 15:56:19 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-08-11 15:56:19 - INFO - Root WebApplicationContext: initialization completed in 381 ms
-2026-08-11 15:56:19 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-11 15:56:19 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-11 15:56:19 - INFO - HikariPool-3 - Starting...
-2026-08-11 15:56:19 - INFO - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@725ca39
-2026-08-11 15:56:19 - INFO - HikariPool-3 - Start completed.
-2026-08-11 15:56:19 - INFO - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.45
-	Default catalog/schema: webchecker_2db/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-11 15:56:19 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-11 15:56:19 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 15:56:19 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-11 15:56:19 - INFO - Starting ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:56:19 - INFO - Tomcat started on port 8080 (http) with context path '/'
-2026-08-11 15:56:19 - INFO - Started WebChecker2Application in 0.802 seconds (process running for 153.341)
-2026-08-11 15:56:19 - INFO - Condition evaluation unchanged
-2026-08-11 15:56:20 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-11 15:56:20 - INFO - Graceful shutdown complete
-2026-08-11 15:56:20 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 15:56:20 - INFO - HikariPool-3 - Shutdown initiated...
-2026-08-11 15:56:20 - INFO - HikariPool-3 - Shutdown completed.
-2026-08-11 15:58:26 - INFO - HV000001: Hibernate Validator 9.0.1.Final
-2026-08-11 15:58:26 - INFO - Starting WebChecker2Application using Java 25 with PID 6892 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
-2026-08-11 15:58:26 - INFO - No active profile set, falling back to 1 default profile: "default"
-2026-08-11 15:58:26 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-08-11 15:58:26 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-08-11 15:58:27 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-11 15:58:27 - INFO - Finished Spring Data repository scanning in 50 ms. Found 2 JPA repository interfaces.
-2026-08-11 15:58:28 - INFO - Tomcat initialized with port 8080 (http)
-2026-08-11 15:58:28 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:58:28 - INFO - Starting service [Tomcat]
-2026-08-11 15:58:28 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-08-11 15:58:28 - INFO - Root WebApplicationContext: initialization completed in 1312 ms
-2026-08-11 15:58:28 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-11 15:58:28 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
-2026-08-11 15:58:28 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-11 15:58:28 - INFO - HikariPool-1 - Starting...
-2026-08-11 15:58:29 - INFO - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8dcd271
-2026-08-11 15:58:29 - INFO - HikariPool-1 - Start completed.
-2026-08-11 15:58:29 - INFO - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.45
-	Default catalog/schema: webchecker_2db/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-11 15:58:30 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-11 15:58:30 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 15:58:30 - INFO - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-08-11 15:58:30 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-11 15:58:30 - INFO - Starting ProtocolHandler ["http-nio-8080"]
-2026-08-11 15:58:30 - INFO - Tomcat started on port 8080 (http) with context path '/'
-2026-08-11 15:58:30 - INFO - Started WebChecker2Application in 4.662 seconds (process running for 5.811)
-2026-08-11 16:02:37 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-11 16:02:37 - INFO - Graceful shutdown complete
-2026-08-11 16:02:37 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 16:02:37 - INFO - HikariPool-1 - Shutdown initiated...
-2026-08-11 16:02:37 - INFO - HikariPool-1 - Shutdown completed.
-2026-08-11 16:03:32 - INFO - HV000001: Hibernate Validator 9.0.1.Final
-2026-08-11 16:03:32 - INFO - Starting WebChecker2Application using Java 25 with PID 28080 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
-2026-08-11 16:03:32 - INFO - No active profile set, falling back to 1 default profile: "default"
-2026-08-11 16:03:32 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-08-11 16:03:32 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-08-11 16:03:33 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-11 16:03:33 - INFO - Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
-2026-08-11 16:03:33 - INFO - Tomcat initialized with port 8080 (http)
-2026-08-11 16:03:33 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-11 16:03:33 - INFO - Starting service [Tomcat]
-2026-08-11 16:03:33 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-08-11 16:03:33 - INFO - Root WebApplicationContext: initialization completed in 1205 ms
-2026-08-11 16:03:33 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-11 16:03:34 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
-2026-08-11 16:03:34 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-11 16:03:34 - INFO - HikariPool-1 - Starting...
-2026-08-11 16:03:34 - INFO - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17deebe0
-2026-08-11 16:03:34 - INFO - HikariPool-1 - Start completed.
-2026-08-11 16:03:34 - INFO - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.45
-	Default catalog/schema: webchecker_2db/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-11 16:03:35 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-11 16:03:35 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 16:03:35 - INFO - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-08-11 16:03:36 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-11 16:03:36 - INFO - Starting ProtocolHandler ["http-nio-8080"]
-2026-08-11 16:03:36 - INFO - Tomcat started on port 8080 (http) with context path '/'
-2026-08-11 16:03:36 - INFO - Started WebChecker2Application in 4.475 seconds (process running for 5.428)
-2026-08-11 16:06:56 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-11 16:06:56 - INFO - Graceful shutdown complete
-2026-08-11 16:06:56 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 16:06:56 - INFO - HikariPool-1 - Shutdown initiated...
-2026-08-11 16:06:56 - INFO - HikariPool-1 - Shutdown completed.
-2026-08-11 16:07:02 - INFO - HV000001: Hibernate Validator 9.0.1.Final
-2026-08-11 16:07:02 - INFO - Starting WebChecker2Application using Java 25 with PID 28988 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
-2026-08-11 16:07:02 - INFO - No active profile set, falling back to 1 default profile: "default"
-2026-08-11 16:07:02 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-08-11 16:07:02 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-08-11 16:07:03 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-11 16:07:03 - INFO - Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
-2026-08-11 16:07:03 - INFO - Tomcat initialized with port 8080 (http)
-2026-08-11 16:07:03 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-11 16:07:03 - INFO - Starting service [Tomcat]
-2026-08-11 16:07:03 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-08-11 16:07:03 - INFO - Root WebApplicationContext: initialization completed in 1268 ms
-2026-08-11 16:07:04 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-11 16:07:04 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
-2026-08-11 16:07:04 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-11 16:07:04 - INFO - HikariPool-1 - Starting...
-2026-08-11 16:07:05 - INFO - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@443146eb
-2026-08-11 16:07:05 - INFO - HikariPool-1 - Start completed.
-2026-08-11 16:07:05 - INFO - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.45
-	Default catalog/schema: webchecker_2db/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-11 16:07:06 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-11 16:07:06 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 16:07:06 - INFO - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-08-11 16:07:06 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-11 16:07:06 - INFO - Starting ProtocolHandler ["http-nio-8080"]
-2026-08-11 16:07:06 - INFO - Tomcat started on port 8080 (http) with context path '/'
-2026-08-11 16:07:06 - INFO - Started WebChecker2Application in 4.593 seconds (process running for 5.401)
-2026-08-11 16:08:47 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-11 16:08:47 - INFO - Graceful shutdown complete
-2026-08-11 16:08:47 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 16:08:47 - INFO - HikariPool-1 - Shutdown initiated...
-2026-08-11 16:08:47 - INFO - HikariPool-1 - Shutdown completed.
-2026-08-11 16:08:50 - INFO - HV000001: Hibernate Validator 9.0.1.Final
-2026-08-11 16:08:50 - INFO - Starting WebChecker2Application using Java 25 with PID 13980 (C:\Users\PC\IdeaProjects\WebChecker_2\target\classes started by PC in C:\Users\PC\IdeaProjects\WebChecker_2)
-2026-08-11 16:08:50 - INFO - No active profile set, falling back to 1 default profile: "default"
-2026-08-11 16:08:50 - INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-08-11 16:08:50 - INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-08-11 16:08:51 - INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-11 16:08:51 - INFO - Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
-2026-08-11 16:08:51 - INFO - Tomcat initialized with port 8080 (http)
-2026-08-11 16:08:51 - INFO - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-11 16:08:51 - INFO - Starting service [Tomcat]
-2026-08-11 16:08:51 - INFO - Starting Servlet engine: [Apache Tomcat/11.0.21]
-2026-08-11 16:08:51 - INFO - Root WebApplicationContext: initialization completed in 1324 ms
-2026-08-11 16:08:51 - INFO - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-11 16:08:51 - INFO - HHH000001: Hibernate ORM core version 7.2.12.Final
-2026-08-11 16:08:52 - INFO - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-11 16:08:52 - INFO - HikariPool-1 - Starting...
-2026-08-11 16:08:52 - INFO - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17deebe0
-2026-08-11 16:08:52 - INFO - HikariPool-1 - Start completed.
-2026-08-11 16:08:52 - INFO - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/webchecker_2db]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.45
-	Default catalog/schema: webchecker_2db/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-11 16:08:54 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-11 16:08:54 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 16:08:54 - INFO - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-08-11 16:08:54 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-11 16:08:54 - INFO - Starting ProtocolHandler ["http-nio-8080"]
-2026-08-11 16:08:54 - INFO - Tomcat started on port 8080 (http) with context path '/'
-2026-08-11 16:08:54 - INFO - Started WebChecker2Application in 5.04 seconds (process running for 5.943)
-2026-08-11 16:13:47 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-11 16:13:47 - INFO - Graceful shutdown complete
-2026-08-11 16:13:47 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-11 16:13:47 - INFO - HikariPool-1 - Shutdown initiated...
-2026-08-11 16:13:47 - INFO - HikariPool-1 - Shutdown completed.
+2026-08-19 01:48:45 - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-19 01:48:45 - INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:48:45 - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-19 01:48:45 - INFO - Adding welcome page: class path resource [static/index.html]
+2026-08-19 01:48:45 - INFO - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-19 01:48:45 - INFO - Tomcat started on port 8080 (http) with context path '/'
+2026-08-19 01:48:45 - INFO - Started WebChecker2Application in 0.693 seconds (process running for 80.132)
+2026-08-19 01:48:45 - INFO - Condition evaluation unchanged
+2026-08-19 01:48:46 - INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-19 01:48:46 - INFO - Initializing Servlet 'dispatcherServlet'
+2026-08-19 01:48:46 - INFO - Completed initialization in 1 ms
+2026-08-19 01:48:49 - INFO - Neue Website hinzugefügt GetInIT (ID: 8)
+2026-08-19 01:48:49 - ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null
+	at com.example.webchecker_2.service.WebCheckService.mapToResponse(WebCheckService.java:61)
+	at com.example.webchecker_2.service.WebCheckService.addWebsite(WebCheckService.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.example.webchecker_2.service.WebCheckService$$SpringCGLIB$$0.addWebsite(<generated>)
+	at com.example.webchecker_2.controller.WebCheckerController.addwebsite(WebCheckerController.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-08-19 01:49:19 - INFO - Neue Website hinzugefügt GetInIT (ID: 9)
+2026-08-19 01:49:19 - ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null
+	at com.example.webchecker_2.service.WebCheckService.mapToResponse(WebCheckService.java:61)
+	at com.example.webchecker_2.service.WebCheckService.addWebsite(WebCheckService.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.example.webchecker_2.service.WebCheckService$$SpringCGLIB$$0.addWebsite(<generated>)
+	at com.example.webchecker_2.controller.WebCheckerController.addwebsite(WebCheckerController.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-08-19 01:51:39 - INFO - Neue Website hinzugefügt GetInIT (ID: 10)
+2026-08-19 01:51:39 - ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null
+	at com.example.webchecker_2.service.WebCheckService.mapToResponse(WebCheckService.java:61)
+	at com.example.webchecker_2.service.WebCheckService.addWebsite(WebCheckService.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.example.webchecker_2.service.WebCheckService$$SpringCGLIB$$0.addWebsite(<generated>)
+	at com.example.webchecker_2.controller.WebCheckerController.addwebsite(WebCheckerController.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-08-19 01:52:59 - INFO - Neue Website hinzugefügt GetInIT (ID: 11)
+2026-08-19 01:52:59 - ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.example.webchecker_2.model.Website.getContentItems()" is null
+	at com.example.webchecker_2.service.WebCheckService.mapToResponse(WebCheckService.java:61)
+	at com.example.webchecker_2.service.WebCheckService.addWebsite(WebCheckService.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.example.webchecker_2.service.WebCheckService$$SpringCGLIB$$0.addWebsite(<generated>)
+	at com.example.webchecker_2.controller.WebCheckerController.addwebsite(WebCheckerController.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-08-19 01:59:38 - INFO - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-19 01:59:38 - INFO - Graceful shutdown complete
+2026-08-19 01:59:38 - INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19 01:59:38 - INFO - HikariPool-3 - Shutdown initiated...
+2026-08-19 01:59:38 - INFO - HikariPool-3 - Shutdown completed.

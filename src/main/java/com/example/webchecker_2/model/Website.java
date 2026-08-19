@@ -25,7 +25,6 @@ public class Website {
     @Column(nullable = false,unique = true)
     private String url;
 
-    private String cssSelector;
 
     @Column(name= "interval_minutes")
     private int intervalMinutes = 30;

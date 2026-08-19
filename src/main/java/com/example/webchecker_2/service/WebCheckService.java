@@ -25,7 +25,6 @@ public class WebCheckService {
         Website website = Website.builder().
                 name(request.getName()).
                 url(request.getUrl()).
-                cssSelector(request.getCssSelector()).
                 intervalMinutes(request.getIntervalMinutes()).
                 recipientEmail(request.getRecipientEmail()).
                 build();
@@ -65,7 +64,6 @@ public class WebCheckService {
                 .id(website.getId())
                 .name(website.getName())
                 .url(website.getUrl())
-                .cssSelector(website.getCssSelector())
                 .intervalMinutes(website.getIntervalMinutes())
                 .lastChecked(website.getLastChecked())
                 .recipientEmail(website.getRecipientEmail())

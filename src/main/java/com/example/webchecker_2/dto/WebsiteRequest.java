@@ -15,8 +15,6 @@ public class WebsiteRequest {
     @Pattern(regexp = "^(http|https)://.*$", message = "URL muss mit http:// oder https:// beginnen")
     private String url;
 
-    private String cssSelector;
-
 
     @Min(value =1, message = "Interval muss mindestens eine Minute betragen")
     private int intervalMinutes = 30;

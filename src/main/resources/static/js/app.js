@@ -11,7 +11,6 @@ async function loadWebsites() {
         }
         const websites = await response.json();
 
-        // Liste leeren
         list.innerHTML = '';
 
         if (websites.length === 0) {
@@ -19,7 +18,6 @@ async function loadWebsites() {
             return;
         }
 
-        // Für jede Website ein Listenelement erstellen
         websites.forEach(website => {
             const li = document.createElement('li');
             li.innerHTML = `
@@ -32,7 +30,6 @@ async function loadWebsites() {
             list.appendChild(li);
         });
 
-        // Alle Lösch-Buttons aktivieren
         document.querySelectorAll('.delete-btn').forEach(btn => {
             btn.addEventListener('click', deleteWebsite);
         });
@@ -59,7 +56,6 @@ async function deleteWebsite(event) {
             throw new Error('Fehler beim Löschen');
         }
 
-        // Liste neu laden
         loadWebsites();
 
     } catch (error) {
@@ -71,57 +67,61 @@ async function deleteWebsite(event) {
 // ============================================
 // 3. NEUE WEBSITE HINZUFÜGEN
 // ============================================
-document.getElementById('addWebsiteForm').addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    const nameInput = document.getElementById('nameInput');
-    const urlInput = document.getElementById('urlInput');
-
-    const name = nameInput.value.trim();
-    const url = urlInput.value.trim();
-
-    if (!name || !url) {
-        alert('Bitte Name und URL ausfüllen.');
+document.addEventListener('DOMContentLoaded', function() {
+    // Wichtig: Das Formular wird erst GEFUNDEN, nachdem die Seite geladen ist
+    const form = document.getElementById('addWebsiteForm');
+    if (!form) {
+        console.error('Formular mit ID "addWebsiteForm" nicht gefunden!');
         return;
     }
 
-    const newWebsite = {
-        name: name,
-        url: url,
-        intervalMinutes: 30,
-        recipientEmail: 'test@example.com'
-    };
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
 
-    try {
-        const response = await fetch('/api/websites', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(newWebsite)
-        });
+        const nameInput = document.getElementById('nameInput');
+        const urlInput = document.getElementById('urlInput');
 
-        if (!response.ok) {
-            throw new Error('Fehler beim Hinzufügen');
+        const name = nameInput.value.trim();
+        const url = urlInput.value.trim();
+
+        if (!name || !url) {
+            alert('Bitte Name und URL ausfüllen.');
+            return;
         }
 
-        const data = await response.json();
-        console.log('Website hinzugefügt:', data);
+        const newWebsite = {
+            name: name,
+            url: url,
+            intervalMinutes: 30,
+            recipientEmail: 'test@Email.com'
+        };
 
-        // Formular leeren
-        nameInput.value = '';
-        urlInput.value = '';
+        try {
+            const response = await fetch('/api/websites', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newWebsite)
+            });
 
-        // Liste neu laden
-        loadWebsites();
+            if (!response.ok) {
+                throw new Error('Fehler beim Hinzufügen');
+            }
 
-    } catch (error) {
-        console.error('Fehler:', error);
-        alert('Hinzufügen fehlgeschlagen.');
-    }
+            const data = await response.json();
+            console.log('Website hinzugefügt:', data);
+
+            nameInput.value = '';
+            urlInput.value = '';
+
+            loadWebsites();
+
+        } catch (error) {
+            console.error('Fehler:', error);
+            alert('Hinzufügen fehlgeschlagen.');
+        }
+    });
+
+    loadWebsites();
 });
-
-// ============================================
-// 4. BEIM LADEN DER SEITE
-// ============================================
-loadWebsites();
