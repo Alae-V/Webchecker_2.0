@@ -36,6 +36,7 @@ public class Website {
     private String recipientEmail;
 
     @OneToMany(mappedBy="website", cascade=CascadeType.ALL,orphanRemoval=true)
+    @Builder.Default
     private List<ContentItem> contentItems = new ArrayList<>();
 
     public void addContentItem(ContentItem item){
